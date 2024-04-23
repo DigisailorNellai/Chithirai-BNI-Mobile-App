@@ -1,4 +1,4 @@
-import 'package:chithirai_bni_app/Screens/event_details.dart';
+import 'package:chithirai_bni_app/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
        
       ),
-     home: EventDetails(),
+     home: const SplashScreen(),
     );
   }
 }
