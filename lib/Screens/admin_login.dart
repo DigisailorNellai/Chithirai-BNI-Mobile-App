@@ -1,4 +1,4 @@
-import 'package:chithirai_bni_app/Screens/members_login.dart';
+import 'package:chithirai_bni_app/Screens/forget_password.dart';
 import 'package:flutter/material.dart';
 
 class AdminLogin extends StatefulWidget {
@@ -26,7 +26,8 @@ bool checkValue = false;
           Container(
             color: Colors.black.withOpacity(0.5), // Adjust opacity as needed
           ),
-          Padding(padding: const EdgeInsets.symmetric(vertical: 120,horizontal: 30),
+          SingleChildScrollView(
+            child: Padding(padding: const EdgeInsets.symmetric(vertical: 120,horizontal: 30),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +89,7 @@ bool checkValue = false;
               child: TextFormField(
                 decoration:  InputDecoration(
                   border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16.0), 
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 10), 
                   suffixIcon: IconButton(onPressed: (){
                     setState(() {
                       visibility =!visibility;
@@ -99,9 +100,13 @@ bool checkValue = false;
               )
               ),
               const SizedBox(height: 10,),
-              const Align(
+               Align(
                 alignment: Alignment.bottomRight,
-                child: Text('Forget Password',
+                child: GestureDetector(
+                  onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgetPassword()));
+                  },
+                  child: const Text('Forget Password',
                 style: TextStyle(
                   fontFamily: 'Inter',
                   color: Colors.white,
@@ -109,6 +114,8 @@ bool checkValue = false;
                   fontSize: 12
 
                 ),),
+                )
+                
               ),
               const SizedBox(height: 40,),
               Container(
@@ -164,8 +171,10 @@ bool checkValue = false;
             ],
           ),
           )
+          )
         ],
       ),
-    );
+      );
+    
   }
 }
