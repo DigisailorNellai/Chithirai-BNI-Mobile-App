@@ -71,13 +71,17 @@ class _ProfileState extends State<Profile> {
                                   GestureDetector(
                                     onTap: () {},
                                     child: Text('Add Subscription'),
+                                  ),
+                                ]
                                   )
                                 ],
                               ),
+                        )
                             ],
                           ),
+                ]
                         )
-                      ])
-                ]))));
+                      )
+                ));
   }
 }

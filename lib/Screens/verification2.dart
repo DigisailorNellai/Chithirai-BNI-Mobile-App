@@ -1,14 +1,15 @@
-import 'package:chithirai_bni_app/Screens/create_password.dart';
+import 'package:chithirai_bni_app/Screens/forget_password.dart';
+import 'package:chithirai_bni_app/Screens/new_password2.dart';
 import 'package:flutter/material.dart';
 
-class Otp extends StatefulWidget {
-  const Otp({super.key});
+class VerifationPage2 extends StatefulWidget {
+  const VerifationPage2({super.key});
 
   @override
-  State<Otp> createState() => _OtpState();
+  State<VerifationPage2> createState() => _VerifationPageState();
 }
 
-class _OtpState extends State<Otp> {
+class _VerifationPageState extends State<VerifationPage2> {
   late List<FocusNode> _focusNodes;
   late List<TextEditingController> _controllers;
   final _numberOfFields = 4;
@@ -36,7 +37,7 @@ class _OtpState extends State<Otp> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/20502 1.png',
+            'assets/2150917272 1fp baground.png',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -45,39 +46,42 @@ class _OtpState extends State<Otp> {
             color: Colors.black.withOpacity(0.5),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 40),
-            child: IconButton(
-              onPressed: () {
-                Navigator.pop(context, const CreatePassword());
-              },
-              icon: const Icon(Icons.arrow_back),
-              color: (Colors.white),
-            ),
-          ),
+              padding: const EdgeInsets.symmetric(vertical: 40),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pop(context, const ForgetPassword());
+                    },
+                    icon: const Icon(Icons.arrow_back),
+                    color: (Colors.white),
+                  ),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(
+                    'Verification Page',
+                    style: TextStyle(
+                        fontFamily: 'Lato',
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white),
+                  )
+                ],
+              )),
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(top: 130, left: 20),
+              padding: const EdgeInsets.only(top: 130, left: 10),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text(
-                    'OTP verification',
+                    'Verify Email Address',
                     style: TextStyle(
                         fontFamily: 'Lato',
                         fontWeight: FontWeight.w600,
                         fontSize: 32,
-                        color: Colors.white),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const Text(
-                    'Enter Your Code',
-                    style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 24,
                         color: Colors.white),
                   ),
                   const SizedBox(
@@ -128,18 +132,16 @@ class _OtpState extends State<Otp> {
                   const SizedBox(
                     height: 20,
                   ),
+                  const Text(
+                    'Enter your OTP we have send to your register mail id\n           xyz@mail.com . Kindly check your inbox',
+                    style: TextStyle(
+                        fontFamily: 'Lato',
+                        fontWeight: FontWeight.w400,
+                        fontSize: 13,
+                        color: Colors.white),
+                  ),
                   const SizedBox(
-                    height: 40,
-                    child: Center(
-                      child: Text(
-                        'Enter your OTP we have send to your register mail id\nxyz@mail.com . Kindly check your inbox',
-                        style: TextStyle(
-                            fontFamily: 'Lato',
-                            fontWeight: FontWeight.w400,
-                            fontSize: 13,
-                            color: Colors.white),
-                      ),
-                    ),
+                    height: 20,
                   ),
                   const SizedBox(
                     height: 20,
@@ -152,7 +154,12 @@ class _OtpState extends State<Otp> {
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(30)),
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => NewPassword2()));
+                            },
                             style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(

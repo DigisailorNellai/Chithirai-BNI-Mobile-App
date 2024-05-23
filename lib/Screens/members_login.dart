@@ -1,5 +1,5 @@
+import 'package:chithirai_bni_app/Screens/add_subscribtion.dart';
 import 'package:chithirai_bni_app/Screens/forget_password.dart';
-import 'package:chithirai_bni_app/Screens/forget_password2.dart';
 import 'package:chithirai_bni_app/Screens/register.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +7,10 @@ class MembersLogin extends StatefulWidget {
   const MembersLogin({super.key});
 
   @override
-  State<MembersLogin> createState() => _AdminLoginState();
+  State<MembersLogin> createState() => _MembersLoginState();
 }
 
-class _AdminLoginState extends State<MembersLogin> {
+class _MembersLoginState extends State<MembersLogin> {
   bool visibility = false;
   bool checkValue = false;
 
@@ -151,11 +151,8 @@ class _AdminLoginState extends State<MembersLogin> {
                         borderRadius: BorderRadius.circular(50)),
                     child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ForgetPassword2()));
+                          Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const AddSubscribtion()));
                         },
                         style: ButtonStyle(
                             backgroundColor:

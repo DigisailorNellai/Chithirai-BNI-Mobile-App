@@ -1,5 +1,5 @@
 import 'package:chithirai_bni_app/Screens/admin_login.dart';
-import 'package:chithirai_bni_app/Screens/verification.dart';
+import 'package:chithirai_bni_app/Screens/verification2.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword2 extends StatefulWidget {
@@ -115,7 +115,7 @@ class _ForgetPasswordState extends State<ForgetPassword2> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const VerifationPage()));
+                                builder: (context) => const VerifationPage2()));
                       },
                       style: ButtonStyle(
                           backgroundColor:

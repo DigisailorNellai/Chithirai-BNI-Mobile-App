@@ -1,4 +1,3 @@
-import 'package:chithirai_bni_app/Screens/Event_profile.dart';
 import 'package:flutter/material.dart';
 
 class NewPassword extends StatefulWidget {
@@ -16,7 +15,7 @@ class _NewPasswordState extends State<NewPassword> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/20502 1.png',
+            'assets/Rectangle 55.png',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -172,11 +171,7 @@ class _NewPasswordState extends State<NewPassword> {
                                   borderRadius: BorderRadius.circular(30)),
                               child: ElevatedButton(
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const EventProfile()));
+                                    
                                   },
                                   style: ButtonStyle(
                                       backgroundColor:

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NewPassword extends StatefulWidget {
-  const NewPassword({super.key});
+class NewPassword2 extends StatefulWidget {
+  const NewPassword2({super.key});
 
   @override
-  State<NewPassword> createState() => _NewPasswordState();
+  State<NewPassword2> createState() => _NewPasswordState();
 }
 
-class _NewPasswordState extends State<NewPassword> {
+class _NewPasswordState extends State<NewPassword2> {
   bool Visibility = false;
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class _NewPasswordState extends State<NewPassword> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/20502 1.png',
+            'assets/2150917272 1fp baground.png',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -142,7 +142,7 @@ class _NewPasswordState extends State<NewPassword> {
                               ),
                               child: TextFormField(
                                 decoration: InputDecoration(
-                                    hintText: 'Confirm Password',
+                                    hintText: 'Re-Enter Password',
                                     border: InputBorder.none,
                                     contentPadding: const EdgeInsets.symmetric(
                                         horizontal: 16.0, vertical: 15),
