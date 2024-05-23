@@ -1,4 +1,4 @@
-import 'package:chithirai_bni_app/Screens/admin_login.dart';
+import 'package:chithirai_bni_app/Screens/members_login.dart';
 import 'package:chithirai_bni_app/Screens/verification.dart';
 import 'package:flutter/material.dart';
 
@@ -28,7 +28,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             child: Row(
               children: [
                    IconButton(onPressed: (){
-                      Navigator.pop(context ,const AdminLogin());
+                      Navigator.pop(context ,const MembersLogin());
              }, icon: const Icon(Icons.arrow_back,
              color: Colors.white)),
              const SizedBox(width: 5,),
@@ -122,14 +122,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               ],
             ),
             )
-            
-            // const Column(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   crossAxisAlignment: CrossAxisAlignment.center,
-            //   children: [
-                
-            //   ],
-            // )
+
           ]   
       )
     );

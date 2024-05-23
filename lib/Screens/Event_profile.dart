@@ -1,7 +1,8 @@
+// ignore: file_names
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:chithirai_bni_app/Screens/Profile_bni.dart';
 import 'package:chithirai_bni_app/Screens/event_details.dart';
-import 'package:chithirai_bni_app/Screens/new_password.dart';
+import 'package:chithirai_bni_app/Screens/meeting_page.dart';
 import 'package:flutter/material.dart';
 
 class EventProfile extends StatefulWidget {
@@ -46,7 +47,7 @@ class _EventProfileState extends State<EventProfile> {
                     //color: Colors.blue,
                     ),
                 child: Image.asset(
-                  'assets/Rectangle 4intro.png',
+                  'assets/conference image.jpg',
                 )),
             ListTile(
               leading: const Icon(
@@ -101,6 +102,21 @@ class _EventProfileState extends State<EventProfile> {
               title: const Text('Meetings'),
               onTap: () {},
             ),
+             ListTile(
+              leading: const Icon(
+                Icons.person_2,
+                color: Colors.red,
+              ),
+              title: const Text('AboutUs'),
+              onTap: () {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => EventDetails(),
+                    )
+                  );
+              },
+            ),
           ],
         ),
       ),
@@ -116,7 +132,7 @@ class _EventProfileState extends State<EventProfile> {
                   height: 200,
                   decoration: const BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/bni-red.webp'))),
+                          image: AssetImage('assets/conference image.jpg'))),
                 ),
                 const SizedBox(
                   height: 10,
@@ -154,7 +170,7 @@ class _EventProfileState extends State<EventProfile> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const EventDetails()));
+                              builder: (context) => const MyMeeting()));
                     },
                     child: Card(
                         child: Column(
@@ -163,7 +179,7 @@ class _EventProfileState extends State<EventProfile> {
                           height: 200,
                           decoration: const BoxDecoration(
                               image: DecorationImage(
-                            image: AssetImage('assets/bni-red.webp'),
+                            image: AssetImage('assets/conference image.jpg'),
                           )),
                         ),
                         const SizedBox(

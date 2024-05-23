@@ -1,4 +1,3 @@
-import 'package:chithirai_bni_app/Screens/forget_password.dart';
 import 'package:chithirai_bni_app/Screens/forget_password2.dart';
 import 'package:flutter/material.dart';
 
@@ -128,7 +127,7 @@ class _AdminLoginState extends State<AdminLogin> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const ForgetPassword()));
+                                builder: (context) => const ForgetPassword2()));
                       },
                       child: const Text(
                         'Forget Password',
@@ -149,13 +148,7 @@ class _AdminLoginState extends State<AdminLogin> {
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(50)),
                     child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ForgetPassword2()));
-                        },
+                        onPressed: () {},
                         style: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.blue)),
